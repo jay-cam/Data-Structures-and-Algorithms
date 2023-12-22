@@ -1,9 +1,8 @@
 cmake_minimum_required(VERSION 3.27)
-project(Data_Structures_and_Algorithms C)
+project(Data_Structures_and_Algorithms)
 
-set(CMAKE_C_STANDARD 23)
-
-include_directories(.)
+set(CMAKE_CXX_STANDARD 23)
 
 add_executable(Data_Structures_and_Algorithms
-               Main.cpp)
+               Main.cpp
+               "Dynamic Array.h")
