@@ -9,14 +9,22 @@
 #define DATA_STRUCTURES_AND_ALGORITHMS_DYNAMIC_ARRAY_H
 
 class DynamicArray {
-public:
+private:
+    //Pointer to store array created using new keyword
+    int* dynamicArray = nullptr;
+    //Size of the array
+    int arraySize;
+    //Container size
+    int arrayCapacity;
 
+public:
     //O(n) where n is capacity
     DynamicArray(int capacity) {
         this->arrayCapacity = capacity;
         this->arraySize = 0;
         dynamicArray = new int[capacity];
     }
+
 
     //Constant time operation O(1)
     int get(int i) {
@@ -91,14 +99,6 @@ public:
     int getCapacity() {
         return arrayCapacity;
     }
-
-private:
-    //Pointer to store array created using new keyword
-    int* dynamicArray = nullptr;
-    //Size of the array
-    int arraySize;
-    //Container size
-    int arrayCapacity;
 };
 
 #endif //DATA_STRUCTURES_AND_ALGORITHMS_DYNAMIC_ARRAY_H
